@@ -1,3 +1,5 @@
+name: CI
+
 on:
   push:
     branches:
@@ -6,11 +8,12 @@ on:
   pull_request:
     branches:
       - main
-  jobs:
-    hello_world:
-    runs-on: ubuntu latest
+
+jobs:
+  hello_world:
+    runs-on: ubuntu-latest
     steps:
-      - name: "Echo Basic Information"
-        run: 
-          echo "REf: $GITHUB_REF "
-          echo "job id: $GITHUB_JOB"
+      - name: Echo Basic Information
+        run: |
+          echo "Ref: $GITHUB_REF"
+          echo "Job id: $GITHUB_JOB"
