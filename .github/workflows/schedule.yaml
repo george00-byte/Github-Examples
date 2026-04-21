@@ -1,6 +1,8 @@
+name: Scheduled Job
+
 on:
   schedule:
-    - cron: '*/1 * * * *' 
+    - cron: '*/1 * * * *'  # every 1 minute
 
 jobs:
   hello_world:
